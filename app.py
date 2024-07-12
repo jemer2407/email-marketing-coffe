@@ -71,9 +71,8 @@ with c2:
             st.warning("Formato de email incorrecto")
         elif not policy:
             st.warning("Por favor, acepta recibir email por parte de la empresa")
-        elif fecha_nac != None:
-            if fecha_nac > datetime.now().date():
-                st.error("Por favor, introduce una fecha de nacimiento válida")
+        elif fecha_nac != None and fecha_nac > datetime.now().date():
+            st.error("Por favor, introduce una fecha de nacimiento válida")
         
         else:
             try:
